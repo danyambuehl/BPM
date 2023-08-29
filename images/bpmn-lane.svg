@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46.335" height="43.773" viewBox="0 0 46.335 43.773">
+  <g id="Gruppe_200" data-name="Gruppe 200" transform="translate(-385.75 -4043.999)">
+    <g id="Gruppe_199" data-name="Gruppe 199" transform="translate(386 4044)">
+      <line id="Linie_28" data-name="Linie 28" x2="46.085" transform="translate(0 0.249)" fill="none" stroke="#16477c" stroke-width="0.5"/>
+      <line id="Linie_29" data-name="Linie 29" x2="46.085" transform="translate(0 43.522)" fill="none" stroke="#16477c" stroke-width="0.5"/>
+      <line id="Linie_28-2" data-name="Linie 28-2" y1="43.771" fill="none" stroke="#16477c" stroke-width="0.5"/>
+    </g>
+    <text id="Lane" transform="translate(397 4079) rotate(-90)" fill="#696969" font-size="12" font-family="Ubuntu"><tspan x="0" y="0">Lane</tspan></text>
+  </g>
+</svg>

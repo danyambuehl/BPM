@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Gruppe_20190" data-name="Gruppe 20190" transform="translate(19633.561 14935.528)">
+    <rect id="Rechteck_19051" data-name="Rechteck 19051" width="100" height="100" transform="translate(-19633.561 -14935.528)" fill="#fff"/>
+    <g id="Gruppe_20189" data-name="Gruppe 20189" transform="translate(-20950.92 -15021.762)">
+      <path id="Pfad_203" data-name="Pfad 203" d="M1412.092,110.9a3.956,3.956,0,0,1,3.947,3.947v42.289a3.954,3.954,0,0,1-3.947,3.938H1322.42a3.954,3.954,0,0,1-3.947-3.938V114.85a3.956,3.956,0,0,1,3.947-3.947Z" transform="translate(0 0)" fill="#fafafa"/>
+      <path id="Pfad_204" data-name="Pfad 204" d="M1412.092,110.9a3.956,3.956,0,0,1,3.947,3.947v42.289a3.954,3.954,0,0,1-3.947,3.938H1322.42a3.954,3.954,0,0,1-3.947-3.938V114.85a3.956,3.956,0,0,1,3.947-3.947Z" transform="translate(0 0)" fill="none" stroke="#999" stroke-miterlimit="10.485" stroke-width="2"/>
+      <g id="Gruppe_182" data-name="Gruppe 182" transform="translate(1345.039 127.818)">
+        <text id="Activity" transform="translate(-0.118 11.943)" fill="#606060" font-size="13" font-family="Ubuntu" style="isolation: isolate"><tspan x="0" y="0">Activity</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

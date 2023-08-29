@@ -1,125 +1,98 @@
 BPMN 2.0
-
-# Objekte
+=========
 
 # Pools and Lanes 
-Pools sind Organisationen oder Rollen (Abteilungen)-> Ganzes Ding
-Lanes Untergliderung von Pools ( Unter Rollen)
 
-## Start symbol
-Dünne Linien 
+**Um so die verschiedenen Prozessteilnehmer abzubilden, werden Pools und Lanes genutzt**
 
-## Stop symbol 
-Dicke Linien
+**Pools**
 
-# Daten Objekte 
+![Pool](images/bpmn-pool.svg)  Pools repräsentieren einen der Lanes übergeordneten Prozessteilnehmer
+
+**Lanes**
+
+![Pool](images/bpmn-lane.svg)  Lanes können Organisationseinheiten oder Rollen sein. Sie werden in Pools gruppiert.
+
+# Ereignisse
+
+**Ereignisse werden genutzt um den Start, das Ende oder den Ablauf eines Prozesses zu kennzeichnen.**
+
+> Eingetretene Ereignisse sind Zustände, die durch einen externen Auslöser erzeugt werden
+
+> Ausgelöste Ereignisse sind Zustände, die vom Prozess selbst erzeugt wurden
+
+**Regel:** Es müssen immer alle aktiven Pfade je Prozessebene bendet werden.
+
+**Start Ereignisse**
+
+![Start Ereignisse](images/bpmn-start-event.svg) Das Startereignis löst den Sequenzfluss eines Prozesses aus.
+
+**Zwischenergenis Ereignisse**
+
+![Zwischenergenis Ereignisse](images/bpmn-intermediate-event.svg) Ein Zwischenereignis unterbricht den Sequenzfluss temporär.
+
+**End Ereignisse**
+
+![End Ereignisse](images/bpmn-end-event.svg) Endereignisse beenden den Sequenzfluss.
+
+**Ereignis-definition**
+
+![Ereignis-definition](images/erreignissdefinition.png)Es kann jedes Erreignis mit einem Symbol / definition ergänzt werden. 
 
 # Gateway 
-Ja / Nein Gateway mit X 
 
-***exklusive Gateways***		| ereignisbasierte exklusive Gateways
-XOR -> Ja oder Nein 
+**Gateway's werden benötigt um Aufspaltungen und Zusammenführungen eines Sequensfluss darzustellen.**
 
-> Symbole = Raute leehr oder Raute mit X 
+**exklusive Gateways**
 
-XOR-Join -> Zusammenführng zweier sequenzflüsse
+![exklusive Gateways](images/bpmn-2-exclusive-gateway.svg) wenn genau eine Bedingung eintreffen darf **(„entweder/oder“)**
 
-***parallele Gateways***		| ereignisbasierte parallele Gateways
-Und Bedingung
+**Zusammenführung:** muss genau **ein** eingehender Prozesspfad erfüllt sein.
 
-Wenn Aktivitäten Parralel bearbeitet werden 
-zum teilen und zusammenführen der Aktiviäten
-Muss zwingend zusammengeführt werden
+--------
 
-> Symbole = Raute mit +			> Symbole = Raute mit lehrem +
-	
-***inklusive Gateways*** 
+**Paralleles Gateway**
 
-Oder Bedingung
+![Paralleles Gateway](images/bpmn-2-parallel-gateway.svg) Es müssen alle ausgehenden Prozesspfade verfolgt werden **(„und“)**
 
-Werden Aktivitäten Parralel durchgeführt aber es müssen nicht alle ausgeführt werden sondern einfach mindestens eine. 
+**Zusammenführung:** alle eingehenden Pfade erfüllt sind, darf der Prozessfluss fortgesetzt werden.
 
-> Symbole = Raute mit o	
+---------
 
-***ereignisbasierte Gateways***	| ereignisbasierte exklusive Gateways
+**Inklusives Gateway**
 
-gleich wie ein exclusives Gateway aber ausgelöst von einem Erreignis
+![Inklusives Gateway](images/bpmn-2-inclusive-gateway.svg) Wenn einem oder mehreren Prozesspfade gefolgt werden kann **(„und/oder“)**
 
-> Symbole = Raute mit zwei kreisen und einem Viereck
+**Zusammenführung:** muss auf alle zuvor ausgelösten Pfade gewartet werden
+
+-----------
+
+**Ereignis-basiertes Gateway**
+
+![Ereignis-basiertes Gateway](images/bpmn-2-event-based-gateway.svg) Bei ereignis-basierten Gateways wird derjenige Sequenzfluss verflogt, dessen Ereignis zeitlich als **erstes eintritt**.
 
 
-Komplexe Gateways 
+# Aktivitäten 
 
-Gateway Aufgabe wird mit Text definiert 
-z.b Min.2 aus 3 Aktiviäten müssen ausgeführt werden.
+**Abbildung von einzelnen Prozessschritten**
 
-> Symbole = Raute mit *	
+***Aktivität***
 
-# Aktivität 
-Arbeitseinhaten in einem Prozess
+![Aktivität](images/bpmn-activity.svg) Stellt einen Arbeitsschritt dar und wird aktiv formuliert.
 
-***Aufgaben***
+***Teilprozess***
 
-> Symbole = Rechteck mit dünner line	
-
-***Teilprozesse***
-Aktiviät mit Subaktivitäten
-
-> Symbole = Rechteck mit dünner line und +
-
-***Aufruf-Aktivität***
-Wird global definiert und hier nur verlinkt.
-
-> Symbole = Rechteck mit dicker line
+![Aktivität](images/bpmn-subprocess.svg) Stellt eine Prozess mit mehreren unter aktivitäten dar.
 
 ***Task-definition***
 
-Siehe JPEG
-
-***Schleifen***
-Wenn etwas mehrmals ausgeführt wird (Bewerbung Prüfen)
-
-> Symbole = Runder Pfeil 
-
-***Mehrfachaktivitäten***
-Wenn etwas mehrfach seriell oder parralel ausgeführt werden muss 
-
-Unterschid zu schleiffe weis man bereits wie viel mal man es durchführen muss. 
-
-> Symbole = Hamburger
+![Task-definition](images/Taskdefinition2.png) Aktivitäten können mit einem Symbol / definition ergänzt werden.
 
 # Sequenzfluss 
 Fluss Lienien / Lienien zwischen erregnissen. 
 Reienfolge wird definiert
 
-# Ereignis 
 
-***Startereignis*** 
-
-> Symbole = Ein kreis 
-
-***Zwischenereignis***
-
-> Symbole = zwei Kreise
-
-	Eintretendes Zwischenereignis
-	Bestellung wird empfangen (Ereigniss das herein kommt)
-	> Symbole = Leeres E-Mail
-	
-
-	auslösendes Zwischenereignis
-	Verschicken von bestellung ( ausgehendes ereignis)
-	> Symbole = volles E-Mail
-
-***Endereignis***
-
-> Symbole = Ein dicker kreis
-
-***Eregnis-definition**
-
-Es kann jedes Erreignis mit einem Symbol / definition ergänzt werden. 
-
-beendet alle aktiven Pfade ausf aktueller Prozessebene. 
 
 *** Link-Ereignis***
 
