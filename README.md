@@ -13,6 +13,16 @@ BPMN 2.0
 
 ![Pool](images/bpmn-lane.svg)  Lanes können Organisationseinheiten oder Rollen sein. Sie werden in Pools gruppiert.
 
+# Verbinder 
+
+**Sequenzfluss**
+
+![Sequenzfluss](images/sequence-flows-bpmn.svg)  verbinden die Aktivitäten, Ereignisse und Gateways eines Prozesses miteinander 
+
+**Nachrichtenfluss**
+
+![Nachrichtenfluss](images/message-flows-bpmn.svg) Nachrichtenflüsse symbolisieren den Informationsaustausch mit externen Prozessteilnehmern
+
 # Ereignisse
 
 **Ereignisse werden genutzt um den Start, das Ende oder den Ablauf eines Prozesses zu kennzeichnen.**
@@ -88,14 +98,4 @@ BPMN 2.0
 
 ![Task-definition](images/Taskdefinition2.png) Aktivitäten können mit einem Symbol / definition ergänzt werden.
 
-# Sequenzfluss 
-Fluss Lienien / Lienien zwischen erregnissen. 
-Reienfolge wird definiert
 
-
-
-*** Link-Ereignis***
-
-Weiterleitung 
-
-> Symbole = dicker Pfeil
